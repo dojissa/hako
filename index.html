@@ -255,7 +255,8 @@ function MobileApp({
   let twoPanel=activePanels.length===2;
 
   return(0,o.jsxs)(o.Fragment,{children:[
-    (0,o.jsxs)("div",{style:{height:"100vh",display:"flex",flexDirection:"column",overflow:"hidden",background:n.bg},children:[
+    (0,o.jsx)(Sv,{palette:n}),
+    (0,o.jsxs)("div",{style:{height:"100dvh",display:"flex",flexDirection:"column",overflow:"hidden",background:n.bg},children:[
 
       /* ── Header - identical to desktop ── */
       (0,o.jsxs)("header",{style:{background:n.surface,borderBottom:`1.5px solid ${n.border}`,
@@ -313,8 +314,9 @@ function MobileApp({
       }),
 
       /* ── Bottom tab bar ── */
-      (0,o.jsx)("div",{style:{height:52,borderTop:`1.5px solid ${n.border}`,background:n.surface,
-        display:"flex",flexShrink:0,paddingBottom:"env(safe-area-inset-bottom,0px)"},children:
+      (0,o.jsxs)("div",{style:{borderTop:`1.5px solid ${n.border}`,background:n.surface,
+        display:"flex",flexDirection:"column",flexShrink:0,paddingBottom:"env(safe-area-inset-bottom,0px)"},children:[
+        (0,o.jsx)("div",{style:{display:"flex",height:52},children:
         BOTTOM_TABS.map(tab=>{
           let active=activePanels[0]===tab.id;
           return(0,o.jsxs)("button",{
@@ -334,6 +336,7 @@ function MobileApp({
           },tab.id)
         })
       })
+    ]}),
     ]}),
     /* Modals rendered outside main div so position:fixed works correctly */
     (0,o.jsx)(MoModalLayer,{modalState,setModalState,editingEvent,setEditingEvent,
