@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
   <title>hako — modular planner</title>
   <!-- PWA / Home-screen icon (inline data URI – works from any host/GitHub Pages) -->
   <link rel="icon" type="image/png" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAADTUlEQVR42u3dwXEaURBF0fm/FATpsFMCzoGdM4CCDLwjByegndJRFvLeC1uAYF435ySgEb56auwqM5aVvb1/fC608rrdjLW+9hAwnQIfIqZT3EPIdAp7CJlOYQ8h0ynsIWQ6hT3FTJJbe5piplPUQ8h0OkGmmOm01lPMdIp6iplOUU8x0ynq6WWik/kdPxWQstJTzHSKeoqZTlG7oel/Q1tnqq60hab3QltnKq+0habvQltnqq+0habnQltnOqy0habvDQ3VDecGFhoEDYKGy4J2P2OhQdAgaLjIS+qDnY7nVb/+/rBLeA1+p/x57A+7HxWCHmlvCtcOOSHspJCrhT3FnPVMyTFXeL6IhU4M+dFrnR5KlbX2ppBWVg+6yjrf81krrnPqc08xr/vMVWNOfX4nB06OZ13n73726uuc+H1YaCw0CBoEDYJG0CBoEDQIGgSNoEHQIGgQNAgaQYOgQdAgaBA0ggZBg6BB0CBoBA2CBkGDoEHQGap8slSl70PQWGisdOrzC1oUrZ5b0LTy4iXIWrsKH1OR/BvFQoul1fNZaGvd6s4XtDVsxcmBoEHQIGgQNIIGQYOgQdDwRf6lMNjpeP6Z8iz7w+6XoCkf8t/PlB62k0PMrZ7PQgul1VpbaFoRtHVu9dyCFkWr5xc0Tg6sc+r3IWgsNAgaBA2CRtAgaBA0CBoEjaBB0CBoEDQIGkGDoEHQIGgQNIIGQYOgQdAgaAQNggZBg6BB0AgaBM2/VPnsv0rfx1zxRaj8B+in0ULTcaXTnn+u/GJY58JR+5zC4lE7NfL5JNmwtavwQULJv1HG2/vHZ8rDnI5nyxwedfp5FBV0YtRrnhlJYVe58+OCTgnbvVxTbNBwDX8PjaBB0CBoEDSCBkFDXtCv283wMmChQdAgaLgsaHc0HbxuN8NC4+SA+KCdHVQ/Nyw0vU8OK03ldbbQ9H9TaKWpus4Wmv4LbaWpus4WmudYaCtNxXX+70KLmkoxf+nkEDVVYnZD8zw3tJWm2jpftNCiJj3mi08OUZMc81U3tKhJjXlZluWmOP1XvKSEfPVCW2tSY745aFGTFPPNJ4cThJSQ7xK0sFn7N/xdzwVh8+hT9SH3r7B51Huuh7+hE7eI7+kPuk1Yy0hq4PIAAAAASUVORK5CYII="/>
@@ -421,7 +421,7 @@ function MobileApp({
 
       /* ── Header - identical to desktop ── */
       (0,o.jsxs)("header",{style:{background:n.surface,borderBottom:`1.5px solid ${n.border}`,
-        padding:"0 12px",display:"flex",alignItems:"center",gap:8,height:46,flexShrink:0},children:[
+        padding:"env(safe-area-inset-top,0px) 12px 0",display:"flex",alignItems:"center",gap:8,minHeight:46,flexShrink:0},children:[
         (0,o.jsx)("div",{className:"hako-wordmark",style:{color:n.accent,marginRight:2},children:"hako"}),
         /* palette circles + hue dial */
         (0,o.jsxs)("div",{style:{display:"flex",gap:4,alignItems:"center"},children:[
